@@ -1,0 +1,22 @@
+[
+   {
+      "link": "exchange",
+      "name": "Exchange"
+   },
+   {
+      "id": 1,
+      "name": "Our mission"
+   },
+   {
+      "id": 2,
+      "name": "Optimal"
+   },
+   {
+      "id": 3,
+      "name": "Services"
+   },
+   {
+      "id": 4,
+      "name": "FAQs"
+   }
+]

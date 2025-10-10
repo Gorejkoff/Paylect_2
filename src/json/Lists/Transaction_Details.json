@@ -1,0 +1,27 @@
+[
+   {
+      "id": 1,
+      "title": "You send",
+      "data": "1 BTC ≈ $111 422.34"
+   },
+   {
+      "id": 2,
+      "title": "Exchange rate",
+      "data": "1 BTC ~ 111 474.66 USDT"
+   },
+   {
+      "id": 3,
+      "title": "Service fee",
+      "data": "1 337.79672 USDT"
+   },
+   {
+      "id": 4,
+      "title": "Network fee",
+      "data": "1 USDT"
+   },
+   {
+      "id": 5,
+      "title": "You receive",
+      "data": "~ 1 337.79672 USDT"
+   }
+]

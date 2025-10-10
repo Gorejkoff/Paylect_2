@@ -1,0 +1,26 @@
+[
+   {
+      "id": 1,
+      "title": "Multi-currency acceptance (65+ cryptocurrencies)",
+      "text": "Accept a wide range of popular cryptocurrencies, ensuring choice for your clients.",
+      "open": false,
+      "close": false,
+      "decideai": true
+   },
+   {
+      "id": 2,
+      "title": "Static wallets for simplified deposits",
+      "text": "Generate reusable wallet addresses.",
+      "open": true,
+      "close": false,
+      "decideai": true
+   },
+   {
+      "id": 3,
+      "title": "Automatic conversion to stablecoins",
+      "text": "Protect your funds from market volatility with seamless conversion to stable cryptocurrencies.",
+      "open": false,
+      "close": true,
+      "decideai": true
+   }
+]

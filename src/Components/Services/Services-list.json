@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Crypto payment processing for businesses",
+    "text": "Handle transactions effortlessly with a platform built for reliability and speed.",
+    "littie": "services-1.svg",
+    "json": "crypto_payment_processing_for_businesses.json",
+    "button": false
+  },
+  {
+    "id": 2,
+    "title": "Ready-made API and plugins for online integration",
+    "text": "Implement our solutions in just a few steps, boosting your operational efficiency.",
+    "littie": "services-2.svg",
+    "json": "ready_made_api.json",
+    "button": false
+  },
+  {
+    "id": 3,
+    "title": "White-label solutions for branded payment systems",
+    "text": "Customize the platform to reflect your brand, enhancing trust and recognition among your customers.",
+    "littie": "services-3.svg",
+    "json": "white_label_solutions.json",
+    "button": false
+  },
+  {
+    "id": 4,
+    "title": "Secure fund management tools, including Web3 support",
+    "text": "Leverage advanced tools that ensure secure, scalable, and decentralized financial operations.",
+    "littie": "services-4.svg",
+    "json": "secure_fund_management.json",
+    "button": true
+  }
+]

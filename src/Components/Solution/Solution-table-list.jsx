@@ -1,0 +1,21 @@
+import React from "react";
+import * as S from './Solution-style';
+
+
+
+const checkImage =
+   <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-5.42432 13.6252L12.3053 31.082L41.8546 1.9873" stroke="#59FFAC" strokeWidth="2.72763" />
+   </svg>;
+
+export default function SolutionTable({ item }) {
+
+   return (
+      <>
+         <S.SolutionTableCell>{item.title}</S.SolutionTableCell>
+         <S.SolutionTableCell>{!item.open || checkImage}</S.SolutionTableCell>
+         <S.SolutionTableCell>{!item.close || checkImage}</S.SolutionTableCell>
+         <S.SolutionTableCell>{!item.decideai || checkImage}</S.SolutionTableCell>
+      </>
+   )
+}

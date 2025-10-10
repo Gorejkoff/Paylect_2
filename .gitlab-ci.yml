@@ -1,0 +1,24 @@
+stages:
+  - deploy
+  - production
+deploy:
+  stage: deploy
+  only:
+    - develop
+  except:
+    - tags
+  script:
+    - /usr/bin/rsync -rult --exclude=.git/ --exclude=.gitlab-ci.yml --password-file=/etc/rsyncd.scrt $CI_PROJECT_DIR/ git-bck@51.195.66.18::paylect.com
+    - sleep 35
+    - sshpass -p$userpass ssh -o StrictHostKeyChecking=no pokemon@51.195.66.18 -p 61874 "cat /var/www/pokemon/deploy_git_paylect.com.log"
+production:
+  stage: production
+  only:
+    - main
+  except:
+    - tags
+  script:
+    - /usr/bin/rsync -rult --exclude=.git/ --exclude=.gitlab-ci.yml --password-file=/etc/rsyncd.scrt $CI_PROJECT_DIR/ git-bck@51.38.109.165::paylect.com_prod
+    - sleep 15
+    - sshpass -p$userpasspr ssh -o StrictHostKeyChecking=no pokemon@51.38.109.165 -p 64998 "cat /var/www/pokemon/deploy_git_paylect.com.log"
+    
