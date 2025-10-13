@@ -18,6 +18,7 @@ font-family: Stratos;
 font-size: 15px;
 text-transform: uppercase;
 color: #848484;
+transition: all 0.3s;
 &:disabled{
 pointer-events: none;
 }
@@ -25,6 +26,9 @@ pointer-events: none;
 background-color: #141414;
 border-radius: 60px;
 color: #F4F6F6;
+}
+&:not(.active):hover{
+   color: #141414;
 }
 `
 export const ButtonShell = styled.div`

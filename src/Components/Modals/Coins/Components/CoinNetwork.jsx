@@ -11,7 +11,7 @@ export default function CoinNetwork() {
          <M.LightPadding>
             <CoinHeader
                title='Select network'
-               idModal='select_network'
+               idModal='coin_network'
             />
             <CoinGrid props={coinList} />
          </M.LightPadding>

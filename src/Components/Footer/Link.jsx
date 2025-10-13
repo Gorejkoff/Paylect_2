@@ -49,7 +49,7 @@ export default function Link(props) {
 
    const tag = props.list.type === 'button' ? 'button' : 'a';
 
-   const MotionNavLink = props.list.link ? motion.create(NavLink) : motion(tag);
+   const MotionNavLink = props.list.link ? motion.create(NavLink) : motion.create(tag);
 
    const propsLink =
       props.list.link ?

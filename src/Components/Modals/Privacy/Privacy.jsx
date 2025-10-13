@@ -19,9 +19,7 @@ export default function Privacy() {
   // if (!isOpen) return null;
 
   return (
-    <>
-      <BackgroundModal isOpen={isOpen} />
-
+    <BackgroundModal isOpen={isOpen}>
       <M.ModalWrapper
         id={id}
         data-lenis-prevent
@@ -476,7 +474,7 @@ export default function Privacy() {
           </ContainerModal>
         </S.PrivacyScroll>
       </M.ModalWrapper>
-    </>
+    </BackgroundModal>
   );
 }
 

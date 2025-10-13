@@ -1,5 +1,5 @@
 import React from 'react';
-import { Background } from './BackgroundModal.style';
+import * as S from './BackgroundModal.style';
 
 const animationBackground = {
    visible: {
@@ -12,11 +12,16 @@ const animationBackground = {
    },
 };
 
-export default function BackgroundModal({ isOpen }) {
+export default function BackgroundModal({ children, isOpen }) {
 
    return (
-      <Background
-         style={isOpen ? animationBackground.visible : animationBackground.hidden}
-      />
+
+      <S.Shell>
+         <S.Background
+            style={isOpen ? animationBackground.visible : animationBackground.hidden}
+         />
+         {children}
+      </S.Shell>
+
    );
 };

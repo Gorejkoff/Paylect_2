@@ -9,7 +9,7 @@ const modalsSlice = createSlice({
       terms: { isOpen: false, data: null, type: 'terms' },
       sent: { isOpen: false, data: null, type: 'sent' },
       privacy: { isOpen: false, data: null, type: 'privacy' },
-      select_network: { isOpen: false, data: null, type: 'select_network' },
+      coin_network: { isOpen: false, data: null, type: 'coin_network' },
       coin_list: { isOpen: false, data: null, type: 'coin_list' },
       QRCode: { isOpen: false, data: null, type: 'QRCode' },
       exchange: { isOpen: false, data: null, type: 'exchange' },

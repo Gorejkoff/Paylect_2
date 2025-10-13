@@ -17,9 +17,7 @@ export default function QRCode() {
 
 
    return (
-      <>
-         <BackgroundModal isOpen={isOpen} />
-
+      <BackgroundModal isOpen={isOpen}>
          <M.ModalWrapper
             id={id}
             data-lenis-prevent
@@ -60,7 +58,7 @@ export default function QRCode() {
             </M.ModalScroll>
 
          </M.ModalWrapper>
-      </>
+      </BackgroundModal>
 
    );
 };

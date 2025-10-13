@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BackgroundModal from "../BackgroundModal/BackgroundModal";
 import * as M from '../Modal.style';
 import { useSelector } from "react-redux";
@@ -12,30 +12,33 @@ import ExchangeNotPaid from "../../Exchange/ExchangeNotPaid/ExchangeNotPaid";
 
 
 
-
-
-
 const id = "exchange";
 
 export default function Contact() {
-
-   const [step, setStep] = useState(1)
+   const ref = useRef();
+   const [step, setStep] = useState(1);
 
    const closeModal = useCloseModal(id);
    const isOpen = useSelector(state => state.modals[id].isOpen);
+
+   useEffect(() => {
+      ref.current.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+      });
+   }, [step]);
+
 
    const stepMethods = {
       nextStep: () => setStep(s => s + 1),
       prevtStep: () => setStep(s => s > 1 && s - 1),
       resetStep: () => setStep(s => s = 1),
-
-   }
+   };
 
    return (
-      <>
-         <BackgroundModal isOpen={isOpen} />
-
+      <BackgroundModal isOpen={isOpen}>
          <M.ModalWrapper
+            ref={ref}
             className="dark"
             id={id}
             data-lenis-prevent
@@ -69,6 +72,6 @@ export default function Contact() {
                </M.ModalContainer>
             </M.ModalScroll>
          </M.ModalWrapper >
-      </>
+      </BackgroundModal>
    );
 }

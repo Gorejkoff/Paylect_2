@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ModalWrapper = styled.div`
 position: fixed;
-z-index: 100;
+z-index: 10;
 top: -120%;
 left: 0;
 width: 100vw;
@@ -26,36 +26,38 @@ margin-left: auto;
 margin-right: auto;
 `
 export const ModalContainer = styled.div`
-  padding: 12px;
+--padding: 12px;
+  padding: var(--padding);
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   @media (min-width: 1100px) {
-    padding: 150px 20px;
+    --padding: 20px;
   }
 `
 export const LightBody = styled.div`
-background-color: #C1C1C1;
-overflow: hidden;
 width: 100%; 
+overflow: hidden;
+background-color: #C1C1C1;
 &.network-list{
-      max-width: 720px;
-   }
-   &.coin-list{
-      max-width: 900px;
-   }
-   &.qr-code{
-      max-width: 340px;
-   }
+  max-width: 720px;
+}
+&.coin-list{
+  max-width: 900px;
+}
+&.qr-code{
+  max-width: 340px;
 }
 `
+
 export const LightPadding = styled.div`
 padding: 12px;
+display: flex;
+flex-direction: column;
 width: 100vw;
 max-width: 100%;
-
 @media (min-width:1024px) {
   padding: 20px;
 }

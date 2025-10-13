@@ -20,8 +20,7 @@ export default function Terms() {
 
    return (
 
-      <>
-         <BackgroundModal isOpen={isOpen} />
+      <BackgroundModal isOpen={isOpen}>
          <M.ModalWrapper
             id={id}
             data-lenis-prevent
@@ -52,7 +51,7 @@ export default function Terms() {
             </S.SentScroll>
 
          </M.ModalWrapper>
-      </>
+      </BackgroundModal>
 
 
    )

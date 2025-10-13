@@ -23,9 +23,10 @@ grid-template-columns: 1fr 1fr;
 }
 `
 export const SelectScroll = styled.div`
+flex: 1;
+min-height: 0;
 overflow-y: auto;
 overflow-x: hidden;
-max-height: 720px;
 &::-webkit-scrollbar {
    display: none;
 }	

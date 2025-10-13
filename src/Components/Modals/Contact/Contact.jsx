@@ -1,6 +1,7 @@
 import { React, useRef } from "react";
 import { ContainerLarge } from "../../Global-Components/Container";
 import * as S from "./Contact-style";
+import * as M from "../Modal.style";
 import Input from '../../FormsElements/Input/Input';
 import Textarea from "./Textarea";
 import Button from "../../Buttons/ButtonText/Button";
@@ -63,8 +64,7 @@ export default function Contact() {
   // if (!isOpen) return null;
 
   return (
-    <>
-      <BackgroundModal isOpen={isOpen} />
+    <BackgroundModal isOpen={isOpen}>
       <S.ContactWrapper
         data-lenis-prevent
         id={id}
@@ -145,6 +145,6 @@ export default function Contact() {
           </form>
         </ContainerLarge>
       </S.ContactWrapper>
-    </>
+    </BackgroundModal>
   );
 }

@@ -7,30 +7,18 @@ import Search from '../../../FormsElements/Search/Search';
 import CoinSelect from './CoinSelect';
 import CoinHeader from './CoinHeader';
 import changeTabsProps from '../../../../json/Lists/Coin_Buttons_List.json';
-import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 
-const variant = {
-   visible: {
-      width: '100%',
-   },
-   hidden: {
-      width: '0px',
-   }
-}
-
 const id = 'coin_list'
-
 
 function Content() {
    const [isActive, setIsActive] = useState(changeTabsProps[0].id);
 
    return (
-
-      <M.LightPadding>
+      <M.LightPadding style={{ maxHeight: 'calc(100vh - 2 * var(--padding, 50px))' }}>
          <CoinHeader
-            title='Select a coin'
             idModal={id}
+            title='Select a coin'
          />
 
          <TabButtons
@@ -47,7 +35,6 @@ function Content() {
          </S.SelectScroll>
 
       </M.LightPadding>
-
    )
 }
 
@@ -55,14 +42,10 @@ function Content() {
 export default function CoinList() {
 
    const Body = motion.create(M.LightBody);
-   const isOpen = useSelector(state => state.modals[id].isOpen);
 
    return (
       <Body
          className='modal-body coin-list'
-         variants={variant}
-         initial='hidden'
-         animate={isOpen ? 'visible' : 'hidden'}
       >
          <Content />
       </Body>
