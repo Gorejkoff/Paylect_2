@@ -1,8 +1,7 @@
 import { React, useRef } from "react";
 import { ContainerLarge } from "../../Global-Components/Container";
 import * as S from "./Contact-style";
-import Input from "./Input";
-import InputMail from "./Input-mail";
+import Input from '../../FormsElements/Input/Input';
 import Textarea from "./Textarea";
 import Button from "../../Buttons/ButtonText/Button";
 import ButtonClose from "../../Buttons/ButtonClose/ButtonClose";
@@ -98,6 +97,7 @@ export default function Contact() {
                 </S.ContactText>
               </S.ContactShell>
               <div>
+
                 <Input
                   type="text"
                   key="1"
@@ -105,18 +105,19 @@ export default function Contact() {
                   id="name"
                   placeholder="Enter your name *"
                   required
-                  statePhoneInput={statePhoneInput}
+                  regexp='.{1,}'
                 />
 
-                <InputMail
+                <Input
                   type="text"
                   key="2"
                   name="email"
                   id="email"
                   placeholder="Enter your email *"
                   required
-                  statePhoneInput={statePhoneInput}
+                  regexp='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
                 />
+
 
                 <InputMedia statePhoneInput={statePhoneInput} />
 

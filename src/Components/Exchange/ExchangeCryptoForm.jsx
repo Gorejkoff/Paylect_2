@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../FormsElements/InputText/Input';
-import { InputGroup } from '../FormsElements/InputText/Input-style';
+import Input from '../FormsElements/Input/Input';
+import { InputGroup } from '../FormsElements/Input/Input-style';
 export default function ExchangeCryptoForm() {
 
    return (

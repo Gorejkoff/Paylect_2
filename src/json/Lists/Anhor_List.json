@@ -1,6 +1,7 @@
 [
    {
-      "link": "exchange",
+      "type": "button",
+      "id": "exchange",
       "name": "Exchange"
    },
    {

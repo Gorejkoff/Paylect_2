@@ -43,12 +43,12 @@ const changeTabsProps = [
    }
 ];
 
-export default function Exchange() {
+export default function Exchange({ action }) {
 
    return (
-      <Container>
+      <>
          <S.Title>Exchange</S.Title>
-         <S.ExchangeContainer>
+         <S.ExchangeContainer className="modal-body">
             <S.ExchangeBody>
 
                <ExchangeHeader iconType='notifications' />
@@ -69,16 +69,19 @@ export default function Exchange() {
                text="The floating rate can change at any point due to market conditions, so you might receive more or less crypto than expected."
             />
 
-            <SimpleTabs listTabs={tabsList} />
+            <div style={{ marginTop: '40px' }}>
+               <SimpleTabs listTabs={tabsList} />
+            </div>
 
             <S.ExchangeButton>
                <ButtonText
                   text="Next step"
-                  href="/exchange/processing"
+                  action={action.nextStep}
+                  nameClass='large'
                />
             </S.ExchangeButton>
 
          </S.ExchangeContainer>
-      </Container >
+      </>
    );
 };

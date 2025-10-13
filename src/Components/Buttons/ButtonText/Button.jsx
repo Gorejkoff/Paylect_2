@@ -40,8 +40,6 @@ const styleMask = {
    position: "absolute",
    top: "0",
    left: "0",
-   width: "100%",
-   whiteSpace: "nowrap",
    opacity: 1,
    pointerEvents: "all",
 }

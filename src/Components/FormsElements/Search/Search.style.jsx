@@ -43,8 +43,17 @@ button{
         width: 100%;
     }
 }
+`
 
-
+export const Button = styled.button`
+svg {
+    transition: transform 0.3s;
+  }
+&:hover{
+  svg{
+    transform: rotate(180deg);
+   }
+} 
 `
 
 

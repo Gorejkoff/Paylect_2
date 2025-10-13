@@ -82,6 +82,10 @@
    font-style: normal;
 }
 
+html {
+   position: relative;
+}
+
 body {
    font-family: "Unbounded";
 }
@@ -176,10 +180,16 @@ input[type="date"]::-webkit-outer-spin-button {
 
    left: auto;
 
+   transform: rotate(45deg);
+
    transition: fill 0.3s;
 
    width: min-content;
+
+   color: rgba(255, 255, 255, 0.788);
 }
+
+.text:hover {}
 
 @media (min-width:1024px) {}
 
@@ -194,4 +204,21 @@ input[type="date"]::-webkit-outer-spin-button {
    width: 50%;
    background-color: rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(1.5px);
+
+
+   --font-family: "Unbounded", sans-serif;
+   --second-family: "Stratos", sans-serif;
+   --paylect-black: #000000;
+   --paylect-mine-shaft: #373737;
+   --paylect-outrageous-orange: #ff6338;
+   --color-white-solid: #ffffff;
+   --color-white-solid-opacity-35: #ffffff59;
+   --color-grey-1: #030303;
+   --color-spring-green-73: #57FFAF;
+   --color-grey-76: #c1c1c1;
+   --color-spring-green-45: #22c55e;
+   --color-grey-96: #f4f6f6;
+   --color-modal-background: rgba(10, 10, 10, 0.8);
+   --color-almost-black: #141414;
+
 }

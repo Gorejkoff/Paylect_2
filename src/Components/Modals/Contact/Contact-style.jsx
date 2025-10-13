@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const ContactWrapper = styled.div`
-  --index: 50;
   position: fixed;
   top: -120%;
   left: 0;
-  z-index: var(--index);
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   background-color: var(--color-grey-1, #030303);

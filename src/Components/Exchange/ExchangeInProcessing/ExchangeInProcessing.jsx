@@ -8,12 +8,12 @@ import Message from '../Components/Message/Message';
 import InfoCopy from '../Components/InfoCopy/InfoCopy';
 import Info from '../Components/Info/Info';
 
-export default function ExchangeInProcessing() {
+export default function ExchangeInProcessing({ action }) {
 
    return (
       <Container>
          <S.Title>Send funds to the address below</S.Title>
-         <S.ExchangeContainer>
+         <S.ExchangeContainer className="modal-body">
             <S.ExchangeBody>
                <ExchangeHeader iconType='progress' />
                <S.Table>
@@ -92,7 +92,7 @@ export default function ExchangeInProcessing() {
             <S.ExchangeButton>
                <ButtonText
                   text='Start over'
-                  href='/exchange/completed'
+                  action={action.nextStep}
                />
             </S.ExchangeButton>
 

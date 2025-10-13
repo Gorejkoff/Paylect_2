@@ -69,6 +69,7 @@ body {
 input,
 button,
 textarea {
+	font-size: inherit;
 	font-family: inherit;
 	background-color: transparent;
 }

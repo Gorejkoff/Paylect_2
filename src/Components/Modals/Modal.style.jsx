@@ -7,11 +7,12 @@ top: -120%;
 left: 0;
 width: 100vw;
 height: 100vh;
-
 background-color: var(--color-modal-background);
-
 overflow-y: auto;
 overflow-x: hidden;
+&.dark{
+  background-color: var(--paylect-black);
+}
 
 @supports (height: 100dvh;) {
   height: 100dvh;
@@ -32,7 +33,6 @@ export const ModalContainer = styled.div`
   align-items: center;
   justify-content: center;
   @media (min-width: 1100px) {
-   
     padding: 150px 20px;
   }
 `

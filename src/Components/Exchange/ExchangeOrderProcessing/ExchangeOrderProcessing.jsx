@@ -8,16 +8,18 @@ import ButtonText from '../../Buttons/ButtonText/Button';
 
 
 
-export default function ExchangeProcessing() {
+export default function ExchangeProcessing({ action }) {
 
 
 
    return (
       <Container>
          <S.Title>Order processing</S.Title>
-         <S.ExchangeContainer>
+         <S.ExchangeContainer className="modal-body">
             <S.ExchangeBody>
-               <ExchangeHeader iconType='back' />
+               <ExchangeHeader
+                  iconType='back'
+                  action={action.prevtStep} />
                <S.Table>
                   <CurrencyData
                      className="colored"
@@ -77,7 +79,7 @@ export default function ExchangeProcessing() {
             <S.ExchangeButton>
                <ButtonText
                   text="Exchange"
-                  href="/exchange/info"
+                  action={action.nextStep}
                />
             </S.ExchangeButton>
 

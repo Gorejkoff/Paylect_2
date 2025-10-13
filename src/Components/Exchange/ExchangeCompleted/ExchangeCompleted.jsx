@@ -8,14 +8,14 @@ import ButtonText from '../../Buttons/ButtonText/Button';
 import Info from '../Components/Info/Info';
 import { CompletedBody } from './ExchangeCompleted.style';
 
-export default function ExchangeCompleted() {
+export default function ExchangeCompleted({ action }) {
 
    return (
       <Container>
          <S.Title>Exchange</S.Title>
-         <S.ExchangeContainer>
+         <S.ExchangeContainer className="modal-body">
             <S.ExchangeBody>
-               <ExchangeHeader />
+               <ExchangeHeader iconType='completed' />
 
                <CompletedBody>
                   <Message
@@ -49,7 +49,8 @@ export default function ExchangeCompleted() {
             <S.ExchangeButton>
                <ButtonText
                   text="Return to Exchange"
-                  href="/exchange"
+                  action={action.resetStep}
+                  className=""
                />
             </S.ExchangeButton>
 

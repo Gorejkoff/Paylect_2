@@ -5,9 +5,8 @@ font-family: Stratos;
 font-size: 16px;
 line-height: 120%;
 text-align: center;
-&:hot(:last-child){
-   margin-bottom: 20px;
-}
+margin-bottom: 20px;
+
 &>*{
    color: #00FF8A;
 }

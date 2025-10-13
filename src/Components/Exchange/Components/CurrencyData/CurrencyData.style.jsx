@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-
-
-export const Block = styled.div`
-min-height: 160px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-background-color: #141414};
-.colored &{
-  background-color: #57FFAF;
-}
-`
 export const Header = styled.div`
 display: flex;
 justify-content: space-between;
@@ -23,9 +11,7 @@ font-size: 20px;
 line-height: 120%;
 text-transform: uppercase;
 color: #848484;
-.colored &{
-  color:#141414;
-}
+transition: color 0.5s;
 `
 export const Quantity = styled.div`
 font-family: Stratos;
@@ -39,24 +25,14 @@ display: flex;
 align-items: center;
 gap: 4px;
 color: #F4F6F6;
-svg {
-  circle {
-    stroke: #57FFAF;
-  }
-  path {
-    fill: #57FFAF;
-  }
-}
-.colored & svg{
+transition: color 0.5s;
+ svg{
   circle{
-    stroke: #141414;
+    transition: stroke 0.5s;
   }
   path {
-    fill: #141414;
+    transition: fill 0.5s;
   }
-}
-.colored &{
-  color:#141414;
 }
 `
 export const EstimatedValue = styled.div`
@@ -73,18 +49,18 @@ justify-content: space-between;
 export const Name = styled.div`
 font-weight: 600;
 font-size: 40px;
-// line-height: 120%;
 color: #ffffff;
-.colored & {
-  color: #141414;
-}
-@media (min-width:7682px) {
+transition: color 0.5s;
+@media (min-width:768px) {
    font-size: 64px;
 }
 `
 export const NameIcon = styled.div`
 &:nth-last-child(2){
   align-self: flex-start;
+}
+svg path{
+  transition: fill 0.5s;
 }
 `
 export const ChangeBody = styled.div`
@@ -94,8 +70,51 @@ justify-content: flex-end;
 `
 export const Change = styled.button`
 padding: 12px;
-svg path{stroke:#ffffff};
-.colored & svg path{
-  stroke:#141414;
+svg path{
+  transition: stroke 0.5s;
+};
+`
+
+export const Block = styled.div`
+cursor: pointer;
+min-height: 160px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background-color: #141414;
+border: 1px solid rgba(255, 255, 255, 0.12);
+transition: background-color 0.5s, border-color 0.5s;
+
+@media (max-width:1023.98px),
+&:hover{
+  background-color: #57FFAF;
+  border-color: #57FFAF;
+  ${SendTitle}{
+    color:#141414;
+  }
+  ${Format}{
+    color:#141414;
+    svg{
+      circle{
+        stroke: #141414;
+      }
+      path {
+        fill: #141414;
+      }
+    }
+  }
+  ${Name}{
+    color: #141414;
+  }
+  ${Change}{
+    svg path{
+      stroke:#141414;
+    }
+  }
+  ${NameIcon}{
+    path{
+      fill: #141414;
+    }
+  }
 }
 `

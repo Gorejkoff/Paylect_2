@@ -31,7 +31,7 @@ export default function ExchangeHeader({ iconType, action }) {
 
          {iconType === 'back' &&
             <Link
-               to='/exchange'
+               onClick={action}
                aria-label='back'
             >
                <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,11 @@ export default function ExchangeHeader({ iconType, action }) {
             />}
 
          {iconType === 'not_paid' &&
-            <S.NotPaid>not paid</S.NotPaid>
+            <S.NotPaid >not paid</S.NotPaid>
+         }
+
+         {iconType === 'completed' &&
+            <S.NotPaid className='green' >Completed</S.NotPaid>
          }
 
       </S.ExchangeHeader>

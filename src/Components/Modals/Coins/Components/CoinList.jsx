@@ -56,6 +56,7 @@ export default function CoinList() {
 
    const Body = motion.create(M.LightBody);
    const isOpen = useSelector(state => state.modals[id].isOpen);
+
    return (
       <Body
          className='modal-body coin-list'

@@ -27,12 +27,6 @@ export const Menu = styled.div`
   display: flex;
   align-items: center;
   gap: min(55px, 2.75vw);
-
-  button {
-    @media (max-width: 767px) {
-      min-width: 180px;
-    }
-  }
 `;
 
 export const AnhorBody = styled.nav`
@@ -44,22 +38,26 @@ export const AnhorBody = styled.nav`
     display: flex;
   }
 `;
-
 export const AnhorList = styled.ol`
-  display: flex;
+display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: min(25px, 2vw);
-`;
-export const AnhorLink = styled.a`
+  `;
+
+const StyleLink = styled.div`
   position: relative;
   display: block;
   padding: 6px;
   font-size: 20px;
   line-height: 120%;
   color: var(--color-white-solid);
-`;
+  `;
+
+export const AnhorLink = styled(StyleLink).attrs({ as: 'a' })``;
+export const AnhorButton = styled(StyleLink).attrs({ as: 'button' })``;
+
 export const AnhorLinkText = styled.span`
   opacity: 0;
   white-space: nowrap;

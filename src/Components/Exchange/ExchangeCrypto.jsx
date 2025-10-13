@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './Exchange.style';
 import CurrencyData from './Components/CurrencyData/CurrencyData';
-
+import ExchangeInput from './Components/ExchangeInput/ExchangeInput';
 
 
 export default function ExchangeCrypto() {
@@ -11,39 +11,30 @@ export default function ExchangeCrypto() {
       <S.Table>
 
          <CurrencyData
-            className="colored"
-            title="You send"
-            subtitle="146 currencies"
-            format="TRC20"
-            name="BTC"
-            estimatedValue=""
+            title='You send'
+            subtitle='146 currencies'
+            format='TRC20'
+            name='BTC'
+            estimatedValue=''
+            pathSVG={'/icon_currency/Bitcoin.svg'}
             selectionButton={true}
          />
 
-         <S.ValueBody>
-            <S.InDollars>≈ $189 738.93</S.InDollars>
-            <S.Value>
-               <input type='number' name='value_currency' />
-            </S.Value>
-         </S.ValueBody>
+         <ExchangeInput value='≈ $189 738.93' />
 
          <CurrencyData
-            className=""
-            title="You send"
-            // subtitle="146 currencies"
-            format="AVALANCHE C-CHAN"
-            name="ETH"
-            estimatedValue=""
+            title='You get'
+            // subtitle='146 currencies'
+            format='AVALANCHE C-CHAN'
+            name='ETH'
+            estimatedValue=''
+            pathSVG={'/icon_currency/Ether.svg'}
             selectionButton={true}
          />
 
+         <ExchangeInput value='≈ $4 738.93' />
 
-         <S.ValueBody>
-            <S.InDollars>≈ $4 738.93</S.InDollars>
-            <S.Value>1241.00720644</S.Value>
-         </S.ValueBody>
-
-      </S.Table>
+      </S.Table >
 
    );
 };

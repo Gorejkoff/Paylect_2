@@ -8,12 +8,12 @@ import ButtonText from '../../Buttons/ButtonText/Button';
 import Info from '../Components/Info/Info';
 
 
-export default function ExchangeNotRaid() {
+export default function ExchangeNotRaid({ action }) {
 
    return (
       <Container>
          <S.Title>Send funds to the address below</S.Title>
-         <S.ExchangeContainer>
+         <S.ExchangeContainer className="modal-body">
             <S.ExchangeBody>
                <ExchangeHeader iconType='not_paid' />
 
@@ -39,7 +39,7 @@ export default function ExchangeNotRaid() {
             <S.ExchangeButton>
                <ButtonText
                   text="Start over"
-                  href="/exchange"
+                  action={action.resetStep}
                />
             </S.ExchangeButton>
 

@@ -3,6 +3,9 @@ import * as C from '../Header-style';
 import { useScramble } from "use-scramble";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import useOpenModal from "../../../Hooks/ModalsHooks/useOpenModal";
+
+
 
 const variantsHover = {
    hover: { x: -5 },
@@ -56,10 +59,17 @@ export default function AnhorText({ item, scrollAnhor }) {
             onClick: () => { scrollAnhor("#anhor" + item.id) }
          }
 
+   const propsButton = {
+      type: 'button',
+      onClick: useOpenModal(item.id)
+   }
+   const Tag = item.type === 'button' ? C.AnhorButton : C.AnhorLink;
+   const props = item.type === 'button' ? propsButton : propsLink;
+
    return (
 
-      <C.AnhorLink
-         {...propsLink}
+      <Tag
+         {...props}
       >
          <motion.span
             initial="leave"
@@ -86,10 +96,7 @@ export default function AnhorText({ item, scrollAnhor }) {
             </motion.svg>
 
          </motion.span>
-
-
-
-      </C.AnhorLink>
+      </Tag>
 
    )
 }

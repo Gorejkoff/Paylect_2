@@ -5,10 +5,12 @@ import Logo from './Header-components/Logo';
 import Anhor from './Header-components/Anhor';
 import Button from '../Buttons/ButtonText/Button';
 import useOpenModal from "../../Hooks/ModalsHooks/useOpenModal";
+import useMediaQuery from "../../Hooks/useMediaQuery";
+
 
 
 export default function Header({ scrollAnhor }) {
-
+   const MIN1024 = useMediaQuery('(min-width: 1024px)');
    const openModal = useOpenModal("contacts");
 
    return (
@@ -20,8 +22,8 @@ export default function Header({ scrollAnhor }) {
                   <Anhor scrollAnhor={scrollAnhor} />
                   <Button
                      action={openModal}
-                     text="let’s get started"
-                     nameClass="header-button"
+                     text={MIN1024 ? 'let’s get started' : 'exchange'}
+                     nameClass='decreases'
                   />
                </H.Menu>
             </H.HeaderBody>

@@ -7,7 +7,7 @@ import { Button } from "./Button";
 import AnhorList from '../../json/Lists/Anhor_List.json';
 import useOpenModal from "../../Hooks/ModalsHooks/useOpenModal";
 
-export default function Footer({ scrollAnhor, setPrivacyModal, setTermsModal }) {
+export default function Footer({ scrollAnhor }) {
 
   const openModalTerms = useOpenModal("terms");
   const openModalPrivacy = useOpenModal("privacy");

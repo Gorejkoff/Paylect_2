@@ -22,7 +22,7 @@ export default function SimpleTabs({ listTabs }) {
    }
 
    return (
-      <div>
+      <>
          {listTabs.map((item, index) => (
             <SimpleTab
                id={item.id}
@@ -35,6 +35,6 @@ export default function SimpleTabs({ listTabs }) {
                <item.component props={item.props} />
             </SimpleTab>
          ))}
-      </div>
+      </>
    );
 };

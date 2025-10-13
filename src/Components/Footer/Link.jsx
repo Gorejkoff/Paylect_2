@@ -3,6 +3,7 @@ import { useScramble } from "use-scramble";
 import { motion } from "framer-motion";
 import { FooterAnhorText } from './Footer-style';
 import { NavLink } from "react-router-dom";
+import useOpenModal from "../../Hooks/ModalsHooks/useOpenModal";
 
 
 const variantsHover = {
@@ -46,7 +47,9 @@ export default function Link(props) {
       scramble: 10,
    });
 
-   const MotionNavLink = props.list.link ? motion.create(NavLink) : motion.a;
+   const tag = props.list.type === 'button' ? 'button' : 'a';
+
+   const MotionNavLink = props.list.link ? motion.create(NavLink) : motion(tag);
 
    const propsLink =
       props.list.link ?
@@ -58,10 +61,16 @@ export default function Link(props) {
             onClick: () => { props.scrollAnhor("#anhor" + props.list.id) }
          }
 
+   const propsButton = {
+      type: 'button',
+      onClick: useOpenModal(props.list.id)
+   }
+   const setProps = props.list.type === 'button' ? propsButton : propsLink;
+
    return (
 
       <MotionNavLink
-         {...propsLink}
+         {...setProps}
          initial="leave"
          animate="leave"
          whileHover="hover"

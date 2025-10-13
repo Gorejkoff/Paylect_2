@@ -12,6 +12,7 @@ const modalsSlice = createSlice({
       select_network: { isOpen: false, data: null, type: 'select_network' },
       coin_list: { isOpen: false, data: null, type: 'coin_list' },
       QRCode: { isOpen: false, data: null, type: 'QRCode' },
+      exchange: { isOpen: false, data: null, type: 'exchange' },
    },
    reducers: {
       openModal: (state, action) => {
