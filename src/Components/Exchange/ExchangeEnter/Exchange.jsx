@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from '../Exchange.style';
-import { Container } from '../../Global-Components/Container';
 import ExchangeHeader from '../ExchangeHeader'
 import Message from '../Components/Message/Message';
 import TransactionDetails from '../TransactionDetails';
