@@ -1,8 +1,8 @@
 {
   "name": "paylect",
-  "homepage": "https://gorejkoff.github.io/Paylect_2/build/",
+  "homepage": ".",
   "build": {
-    "baseUrl": "."
+    "baseUrl": "https://gorejkoff.github.io/Paylect_2/build/"
   },
   "version": "0.1.0",
   "private": true,
