@@ -1,37 +1,37 @@
 [
    {
       "text": "Bitcoin",
-      "img": "./icon_currency/btc-icon.svg",
+      "img": "/icon_currency/btc-icon.svg",
       "alt": "btc"
    },
    {
       "text": "Ethereum",
-      "img": "./icon_currency/eth-icon.svg",
+      "img": "/icon_currency/eth-icon.svg",
       "alt": "eth"
    },
    {
       "text": "Litecoin",
-      "img": "./icon_currency/ltc-icon.svg",
+      "img": "/icon_currency/ltc-icon.svg",
       "alt": "ltc"
    },
    {
       "text": "Techer",
-      "img": "./icon_currency/usdt-icon.svg",
+      "img": "/icon_currency/usdt-icon.svg",
       "alt": "usdt"
    },
    {
       "text": "Dash",
-      "img": "./icon_currency/dash-icon.svg",
+      "img": "/icon_currency/dash-icon.svg",
       "alt": "dash"
    },
    {
       "text": "XRP",
-      "img": "./icon_currency/xrp-icon.svg",
+      "img": "/icon_currency/xrp-icon.svg",
       "alt": "xrp"
    },
    {
       "text": "Cardano",
-      "img": "./icon_currency/ada-icon.svg",
+      "img": "/icon_currency/ada-icon.svg",
       "alt": "ada"
    }
 ]
