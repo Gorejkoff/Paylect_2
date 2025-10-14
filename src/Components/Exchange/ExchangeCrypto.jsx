@@ -16,7 +16,7 @@ export default function ExchangeCrypto() {
             format='TRC20'
             name='BTC'
             estimatedValue=''
-            pathSVG={'./icon_currency/Bitcoin.svg'}
+            pathSVG={'/icon_currency/Bitcoin.svg'}
             selectionButton={true}
          />
 
@@ -28,7 +28,7 @@ export default function ExchangeCrypto() {
             format='AVALANCHE C-CHAN'
             name='ETH'
             estimatedValue=''
-            pathSVG={'./icon_currency/Ether.svg'}
+            pathSVG={'/icon_currency/Ether.svg'}
             selectionButton={true}
          />
 

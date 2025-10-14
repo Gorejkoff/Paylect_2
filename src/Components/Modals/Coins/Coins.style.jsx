@@ -62,7 +62,7 @@ display:none;
 }
 input:checked+span{
 background-color: #ffffff;
-border-color: @ffffff;
+border-color: #ffffff;
 }
 
 span{
@@ -70,7 +70,8 @@ span{
    width: 20px;
    min-width: 20px;
    height: 20px;
-   border: 1px solid #848484 ;
+   border: 1px solid #848484;
+   transition: border-color 0.3s, background-color 0.3s;
 }
 `
 export const InputWrapper = styled.div`
