@@ -1,6 +1,6 @@
 {
   "name": "paylect",
-  "homepage": ".",
+  "homepage": "https://gorejkoff.github.io/Paylect_2/build/",
   "build": {
     "baseUrl": "."
   },
