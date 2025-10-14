@@ -27,8 +27,10 @@ background-color: #141414;
 border-radius: 60px;
 color: #F4F6F6;
 }
-&:not(.active):hover{
-   color: #141414;
+@media (min-width:1024px) {
+   &:not(.active):hover{
+      color: #141414;
+   }
 }
 `
 export const ButtonShell = styled.div`

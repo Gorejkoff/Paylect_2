@@ -22,7 +22,7 @@ width: 100%;
 grid-template-columns: 1fr 1fr;
 }
 `
-export const SelectScroll = styled.div`
+export const SelectScroll = styled.form`
 flex: 1;
 min-height: 0;
 overflow-y: auto;
@@ -84,13 +84,15 @@ height: 24px;
 }
 `
 export const SelectImg = styled.img`
-display:none;
-height: 32px;
+// display:none;
+--arrowSize: 32px;
+width: 0;
+transition: width 0.3s;
 @media (min-width:768px) {
-   height: 60px;
+   --arrowSize: 60px;
 }
 @media (min-width:1024px) {
-   height: 80px;
+   --arrowSize:  80px;
 }
 `
 export const SelectCoin = styled.label`
@@ -107,15 +109,23 @@ color: #141414;
 input{
    display:none;
 }
-input:checked+${SelectImg}{
-display:block;
+@media (max-width:1023.98px) {
+   input:checked+${SelectImg}{
+      width: var(--arrowSize)
+   }
+}
+@media (min-width:768px) {
+   font-size: 52px;
 }
 
-@media (min-width:768px) {
-font-size: 52px;
-}
+@media (min-width:1024px) {
+   &:hover ${SelectImg}{
+      width: var(--arrowSize)
+   }
+}   
+
 @media (min-width:1250px) {
-font-size: 96px;
+   font-size: 96px;
 }
 `
 

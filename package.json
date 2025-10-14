@@ -1,9 +1,6 @@
 {
   "name": "paylect",
   "homepage": ".",
-  "build": {
-    "baseUrl": "https://gorejkoff.github.io/Paylect_2/build/"
-  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {

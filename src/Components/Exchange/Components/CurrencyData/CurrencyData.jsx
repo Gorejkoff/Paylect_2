@@ -5,7 +5,7 @@ import useGetSVGCode from '../../../../Hooks/useGetSVGCode';
 
 
 export default function CurrencyData({ title, subtitle, format, name, estimatedValue, selectionButton, pathSVG }) {
-   const openModal = useOpenModal("coin_network");
+   const openModal = useOpenModal("standard");
    const iconSVG = useGetSVGCode(pathSVG);
 
    return (
