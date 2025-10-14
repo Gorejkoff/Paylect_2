@@ -31,7 +31,11 @@ button{
    align-self: flex-start;
 }
 `
-
+export const Group = styled.div`
+display: flex;
+align-items: center;
+gap: 8px;
+`
 export const Table = styled.div`
 display: grid;
 grid-template-columns: 1fr;

@@ -50,7 +50,10 @@ export default function Exchange({ action }) {
          <S.ExchangeContainer className="modal-body">
             <S.ExchangeBody>
 
-               <ExchangeHeader iconType='notifications' />
+               <ExchangeHeader
+                  iconType='notifications'
+                  action={action}
+               />
 
                <ChangeTabs props={changeTabsProps} />
 
@@ -58,11 +61,11 @@ export default function Exchange({ action }) {
 
             <ExchangeCryptoForm />
 
-
             <Message
                color="red"
                text="Don't forget to include the XRP Destination Tag from your wallet. If it's required but is missing, your Ripples won't be delivered."
             />
+
             <Message
                color="green"
                text="The floating rate can change at any point due to market conditions, so you might receive more or less crypto than expected."

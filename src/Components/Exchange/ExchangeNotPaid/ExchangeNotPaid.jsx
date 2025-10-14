@@ -33,6 +33,7 @@ export default function ExchangeNotRaid({ action }) {
                </CompletedBody>
             </S.ExchangeBody>
             <Message
+               key={2}
                text={"The funds were not received within 3 hours. Please check the rates and create a new transaction."}
                color="red"
             />

@@ -6,7 +6,6 @@ export default function Message({ text, color }) {
    function setColor() {
       if (color === "green") return { color: '#00FF8A' };
       if (color === "red") return { color: '#FF6338' };
-
       return { color: '#F4F6F6' }
    }
 
@@ -16,7 +15,7 @@ export default function Message({ text, color }) {
       <S.Message
          style={{ ...successStyle }}
       >
-         {text}
+         {Array.isArray(text) ? text.map((e, i) => <React.Fragment key={i}>{e}</React.Fragment>) : text}
       </S.Message >
    );
 };

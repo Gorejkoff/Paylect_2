@@ -15,7 +15,6 @@ const idStandard = 'standard';
 export default function StandardCoins() {
 
    const MIN1024 = useMediaQuery('(min-width: 1024px)');
-   const closeBlockchain = useCloseModal(idBlockchain);
    const closeStandard = useCloseModal(idStandard);
    const isOpenBlockchain = useSelector(state => state.modals[idBlockchain].isOpen);
    const isOpenStandard = useSelector(state => state.modals[idStandard].isOpen);

@@ -24,6 +24,7 @@ export default function ExchangeInProcessing({ action }) {
                      format='TRC20'
                      name='BTC'
                      estimatedValue='1'
+                     pathSVG={'./icon_currency/Bitcoin.svg'}
                      selectionButton={false}
                   />
                   <CurrencyData
@@ -33,6 +34,7 @@ export default function ExchangeInProcessing({ action }) {
                      format='TRC20'
                      name='ETH'
                      estimatedValue='≈ 110 192.6061'
+                     pathSVG={'./icon_currency/Ether.svg'}
                      selectionButton={false}
                   />
                </S.Table>

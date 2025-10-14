@@ -1,7 +1,6 @@
 import { React, useRef } from "react";
 import { ContainerLarge } from "../../Global-Components/Container";
 import * as S from "./Contact-style";
-import * as M from "../Modal.style";
 import Input from '../../FormsElements/Input/Input';
 import Textarea from "./Textarea";
 import Button from "../../Buttons/ButtonText/Button";
@@ -26,7 +25,7 @@ export default function Contact() {
 
   async function checkSubmit(event) {
     event.preventDefault();
-    console.log("event:", event);
+    // console.log("event:", event);
     if (!phoneInputValid.current) return;
 
     const email = document.getElementById("email")?.value ?? "";

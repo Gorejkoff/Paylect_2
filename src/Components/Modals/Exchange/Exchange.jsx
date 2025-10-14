@@ -31,8 +31,9 @@ export default function Contact() {
 
    const stepMethods = {
       nextStep: () => setStep(s => s + 1),
-      prevtStep: () => setStep(s => s > 1 && s - 1),
+      prevtStep: () => setStep(s => s > 1 ? s - 1 : s = 1),
       resetStep: () => setStep(s => s = 1),
+      closeModal: () => closeModal()
    };
 
    return (

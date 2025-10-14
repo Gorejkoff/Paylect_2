@@ -1,62 +1,67 @@
 import styled, { css } from 'styled-components';
 
-export const Header = styled.div`
+export const Header = styled.span`
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
 `
-export const SendTitle = styled.div`
- font-family: Stratos;
+
+export const SendTitle = styled.span`
+display: block;
+font-family: Stratos;
 font-size: 20px;
 line-height: 120%;
 text-transform: uppercase;
-color: #848484;
+color:#141414;
 transition: color 0.5s;
 `
-export const Quantity = styled.div`
+export const Quantity = styled.span`
+display: block;
 font-family: Stratos;
 font-size: 12px;
 line-height: 120%;
-color: #848484;
+color:#141414;
 transition: color 0.5s;
 `
-export const Format = styled.div`
+export const Format = styled.span`
 font-family: Stratos;
 display: flex;
 align-items: center;
 gap: 4px;
-color: #F4F6F6;
+color:#141414;
 transition: color 0.5s;
  svg{
   circle{
+
     transition: stroke 0.5s;
   }
   path {
+
     transition: fill 0.5s;
   }
 }
 `
-export const EstimatedValue = styled.div`
+export const EstimatedValue = styled.span`
 font-weight: 400;
 font-size: 20px;
 line-height: 120%;
 color: #141414;
 `
-export const Footer = styled.div`
+export const Footer = styled.span`
 display: flex;
 align-items: flex-end;
 justify-content: space-between;
 `
-export const Name = styled.div`
+export const Name = styled.span`
 font-weight: 600;
 font-size: 40px;
-color: #ffffff;
+color: #141414;
 transition: color 0.5s;
 @media (min-width:768px) {
    font-size: 64px;
 }
 `
-export const NameIcon = styled.div`
+export const NameIcon = styled.span`
 &:nth-last-child(2){
   align-self: flex-start;
 }
@@ -64,65 +69,69 @@ svg path{
   transition: fill 0.5s;
 }
 `
-export const ChangeBody = styled.div`
+export const ChangeBody = styled.span`
 flex: 1 1 auto;
 display: flex;
 justify-content: flex-end;
 `
-export const Change = styled.button`
+export const Change = styled.span`
 padding: 12px;
 svg path{
   transition: stroke 0.5s;
 };
 `
 
-const BlockStyle = css`
-background-color: #57FFAF;
-  border-color: #57FFAF;
+const BlockDark = css`
+  background-color: #141414;
+  border-color: rgba(255, 255, 255, 0.12);
   ${Quantity},
   ${SendTitle}{
-    color:#141414;
+    color: #848484;
   }
   ${Format}{
-    color:#141414;
+    color: #F4F6F6;
     svg{
       circle{
-        stroke: #141414;
+        stroke: #57FFAF;
       }
       path {
-        fill: #141414;
+        fill: #57FFAF;
       }
     }
   }
+  ${EstimatedValue}{
+    color: #ffffff;
+  }
   ${Name}{
-    color: #141414;
+    color: #ffffff;
   }
   ${Change}{
     svg path{
-      stroke:#141414;
+      stroke:#ffffff;
     }
   }
   ${NameIcon}{
     path{
-      fill: #141414;
+      fill: #ffffff;
     }
   }
 `
 
+
+
 export const Block = styled.div`
-cursor: pointer;
 min-height: 160px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-background-color: #141414;
-border: 1px solid rgba(255, 255, 255, 0.12);
+background-color: #57FFAF;
+border: 1px solid #57FFAF;
 transition: background-color 0.5s, border-color 0.5s;
 
-&:hover{
-  ${BlockStyle}
-}
-@media (max-width:1023.98px){  
-  ${BlockStyle}
+@media (min-width:1024px) {
+  &[type='button']:not(:hover){
+    cursor: pointer;
+    ${BlockDark}
+  }
 }
 `

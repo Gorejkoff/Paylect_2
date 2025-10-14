@@ -17,7 +17,7 @@ export default function ExchangeCrypto() {
             name='BTC'
             estimatedValue=''
             pathSVG={'./icon_currency/Bitcoin.svg'}
-            selectionButton={true}
+            typeButton={true}
          />
 
          <ExchangeInput value='≈ $189 738.93' />
@@ -29,7 +29,7 @@ export default function ExchangeCrypto() {
             name='ETH'
             estimatedValue=''
             pathSVG={'./icon_currency/Ether.svg'}
-            selectionButton={true}
+            typeButton={true}
          />
 
          <ExchangeInput value='≈ $4 738.93' />
