@@ -19,7 +19,7 @@ export default function CoinSelect({ text, img, alt }) {
                setTimeout(closeStandard, MIN1024 ? 300 : 700);
             }}
          />
-         <S.SelectImg src="/svg/arrow-color.svg" alt="selected" />
+         <S.SelectImg src="./svg/arrow-color.svg" alt="selected" />
          {text}
          <S.CoinIcon src={img} alt={alt} />
       </S.SelectCoin>
