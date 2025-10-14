@@ -83,7 +83,7 @@ export const PrivacyList = styled.ol`
 `;
 export const PrivacyListItem = styled.li`
   margin-bottom: 80px;
-  margin-left: 1em;
+  margin-left: 1.3em;
 
   font-weight: 600;
   font-size: 25px;
@@ -118,7 +118,7 @@ export const PrivacyListTitle = styled.div`
 `;
 
 export const PrivacyListOffset = styled.div`
-  margin-left: -1em;
+  margin-left: -1.3em;
 
   & > p {
     margin-bottom: 30px;

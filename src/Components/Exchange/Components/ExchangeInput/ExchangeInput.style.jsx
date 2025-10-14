@@ -19,7 +19,7 @@ export const Value = styled.div`
 text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
-max-width: 100%;
+width: 100%;
 font-weight: 500;
 font-size: 24px;
 color: #C1C1C1;
@@ -28,6 +28,9 @@ width: 100%;
 color: inherit;
 font-size: inherit;
 text-align: right;
+input{
+width: 100%;
+}
 @media (min-width:992px) {
    font-size: 40px;
 }

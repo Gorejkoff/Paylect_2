@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Header = styled.div`
 display: flex;
@@ -17,7 +17,8 @@ export const Quantity = styled.div`
 font-family: Stratos;
 font-size: 12px;
 line-height: 120%;
-color:  #141414;
+color: #848484;
+transition: color 0.5s;
 `
 export const Format = styled.div`
 font-family: Stratos;
@@ -75,20 +76,10 @@ svg path{
 };
 `
 
-export const Block = styled.div`
-cursor: pointer;
-min-height: 160px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-background-color: #141414;
-border: 1px solid rgba(255, 255, 255, 0.12);
-transition: background-color 0.5s, border-color 0.5s;
-
-@media (max-width:1023.98px),
-&:hover{
-  background-color: #57FFAF;
+const BlockStyle = css`
+background-color: #57FFAF;
   border-color: #57FFAF;
+  ${Quantity},
   ${SendTitle}{
     color:#141414;
   }
@@ -116,5 +107,22 @@ transition: background-color 0.5s, border-color 0.5s;
       fill: #141414;
     }
   }
+`
+
+export const Block = styled.div`
+cursor: pointer;
+min-height: 160px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background-color: #141414;
+border: 1px solid rgba(255, 255, 255, 0.12);
+transition: background-color 0.5s, border-color 0.5s;
+
+&:hover{
+  ${BlockStyle}
+}
+@media (max-width:1023.98px){  
+  ${BlockStyle}
 }
 `

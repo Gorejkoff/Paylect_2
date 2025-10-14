@@ -54,7 +54,7 @@ const variantsV = {
 }
 
 
-export default function Input({ className, type, id, name, placeholder, required, disabled, regexp }) {
+export default function Input({ className, type, id, name, placeholder, required, disabled, regexp, action }) {
    const reg = new RegExp(regexp)
 
    const media768 = window.matchMedia('(min-width: 768px)');
@@ -87,7 +87,12 @@ export default function Input({ className, type, id, name, placeholder, required
             placeholder={placeholder}
             required={required}
             disabled={disabled}
-            onChange={regexp ? () => validate() : undefined}
+            onChange={(event) => {
+               regexp && validate();
+               action && action(event);
+            }
+
+            }
          />
 
          <S.InputLine>

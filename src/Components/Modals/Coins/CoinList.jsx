@@ -17,7 +17,7 @@ export default function Coins() {
 
    const closeModal = useCloseModal(id);
    const isOpen = useSelector(state => state.modals[id].isOpen);
-   console.log(MIN1024);
+
    if (MIN1024) return;
 
    return (

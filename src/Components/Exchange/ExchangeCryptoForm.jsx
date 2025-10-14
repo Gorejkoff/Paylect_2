@@ -1,7 +1,16 @@
 import React from 'react';
 import Input from '../FormsElements/Input/Input';
 import { InputGroup } from '../FormsElements/Input/Input-style';
+import useInputOnlyNumbers from '../../Hooks/useInputOnlyNumbers';
+import useInputNotCyrillic from '../../Hooks/useInputNotCyrillic';
+
+
 export default function ExchangeCryptoForm() {
+
+
+   const inputOnlyNumbers = useInputOnlyNumbers();
+   const inputNotCyrillic = useInputNotCyrillic();
+
 
    return (
       <form action="#" method="post" name="" id="" >
@@ -13,7 +22,8 @@ export default function ExchangeCryptoForm() {
                id="wallet_address"
                placeholder="Enter Wallet address *"
                required
-               regexp='.{1,}'
+               regexp='.{2,}'
+               action={inputNotCyrillic}
             />
             <Input
                className="input-tag"
@@ -23,7 +33,8 @@ export default function ExchangeCryptoForm() {
                id="tag"
                placeholder="Enter tag *"
                required
-               regexp=".{1,}"
+               regexp=".{2,}"
+               action={inputOnlyNumbers}
             />
          </InputGroup>
          <Input
@@ -33,7 +44,7 @@ export default function ExchangeCryptoForm() {
             id="invoice"
             placeholder="Email for invoice * *"
             required
-            regexp='.{1,}'
+            regexp='.{2,}'
          />
       </form>
 
