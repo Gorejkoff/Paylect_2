@@ -1,10 +1,10 @@
 import React from 'react';
-import { LightClose } from './ButtonCloseBlackBig.style';
+import { ButtonRotate } from '../Style';
 
 export default function ButtonCloseLight({ action }) {
 
    return (
-      <LightClose
+      <ButtonRotate
          type='button'
          onClick={action}
       >
@@ -12,6 +12,6 @@ export default function ButtonCloseLight({ action }) {
             <circle cx="25" cy="25" r="25" fill="#141414" />
             <path d="M20.2439 20L30 30M20 30L29.7561 20" stroke="white" />
          </svg>
-      </LightClose>
+      </ButtonRotate>
    );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from './ButtonCloseBlackSmall.style';
+import { ButtonRotate } from '../Style';
 
 export default function ButtonCloseBlackSmall({ action }) {
 
    return (
-      <Button
+      <ButtonRotate
          type='button'
          onClick={action}
          aria-label='close'
@@ -14,6 +14,6 @@ export default function ButtonCloseBlackSmall({ action }) {
             <path d="M6.5 18.5209L18.5208 6.50006" stroke="#848484" />
             <path d="M6.5 6.5L18.5208 18.5208" stroke="#848484" />
          </svg>
-      </Button>
+      </ButtonRotate>
    );
 };

@@ -50,12 +50,14 @@ display: flex;
 align-items: center;
 justify-content: center;
 height: 100%;
+width: calc(100% + var(--size));
 opacity: 0;
 pointer-events: none;
 `
 
 export const ButtonArrowWrapper = styled.span`
 position: relative;
+min-width: var(--size);
 width: var(--size);
 height: 100%;
 `

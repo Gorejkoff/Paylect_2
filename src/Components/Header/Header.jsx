@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 import { Container } from '../Global-Components/Container';
 import * as H from './Header-style';
 import Logo from './Header-components/Logo';
 import Anhor from './Header-components/Anhor';
 import Button from '../Buttons/ButtonText/Button';
-import useOpenModal from "../../Hooks/ModalsHooks/useOpenModal";
-import useMediaQuery from "../../Hooks/useMediaQuery";
+import useOpenModal from '../../Hooks/ModalsHooks/useOpenModal';
+import useMediaQuery from '../../Hooks/useMediaQuery';
 
 
 
 export default function Header({ scrollAnhor }) {
    const MIN1024 = useMediaQuery('(min-width: 1024px)');
-   const openModalContact = useOpenModal("contacts");
-   const openModalBlockchain = useOpenModal("blockchain");
+   const openModalContact = useOpenModal('contacts');
+   const openModalBlockchain = useOpenModal('exchange');
 
    return (
       <header>
