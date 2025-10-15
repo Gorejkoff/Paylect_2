@@ -45,13 +45,14 @@ export const QuestionsNumber = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  font-size: 23px;
+  font-size: 16px;
   line-height: 130%;
   text-transform: uppercase;
 
   @media (min-width: 768px) {
     padding-right: 15px;
     flex: 0 0 20%;
+     font-size: 24px;
   }
   @media (min-width: 1100px) {
     flex: 0 0 50%;
@@ -80,9 +81,9 @@ export const QuestionsCircle = styled.div`
 
 export const QuestionsText = styled.div`
   flex: 1 1 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
   line-height: 120%;
   text-transform: uppercase;
 

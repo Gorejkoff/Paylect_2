@@ -38,7 +38,7 @@ export const ModalContainer = styled.div`
   }
 `
 export const LightBody = styled.div`
-width: 100%; 
+width: 100%;
 overflow: hidden;
 background-color: #C1C1C1;
 &.network-list{

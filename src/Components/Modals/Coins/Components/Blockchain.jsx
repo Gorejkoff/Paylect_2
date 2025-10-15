@@ -9,15 +9,16 @@ import CoinHeader from './CoinHeader';
 import changeTabsProps from '../../../../json/Lists/Coin_Buttons_List.json';
 import { motion } from 'framer-motion';
 
-const id = 'standard'
+const idModal = 'blockchain'
 
 function Content() {
    const [isActive, setIsActive] = useState(changeTabsProps[0].id);
 
    return (
       <M.LightPadding style={{ maxHeight: 'calc(100vh - 2 * var(--padding, 50px))' }}>
+
          <CoinHeader
-            idModal={id}
+            idModal={idModal}
             title='Select a coin'
          />
 
@@ -29,10 +30,11 @@ function Content() {
          />
 
          <Search />
+
          <S.SelectScroll
             method="post"
             name="blockchain_select"
-            id="Blockchain_selec"
+            id="blockchain_select"
          >
             {coinSelect.map((item, index) => <CoinSelect {...item} key={index} />)}
          </S.SelectScroll>

@@ -1,23 +1,17 @@
 import React from 'react';
 import * as S from '../Coins.style';
-import useCloseModal from '../../../../Hooks/ModalsHooks/useCloseModal';
-import useMediaQuery from '../../../../Hooks/useMediaQuery';
+import useOpenModal from '../../../../Hooks/ModalsHooks/useOpenModal';
 
 
 export default function CoinSelect({ text, img, alt }) {
-   const MIN1024 = useMediaQuery('(min-width: 1024px)');
-   const closeBlockchain = useCloseModal('blockchain');
-   const closeStandard = useCloseModal('standard');
+   const openModal = useOpenModal('standard');
 
    return (
       <S.SelectCoin>
          <input
             type="radio"
             name="coin_select"
-            onChange={() => {
-               setTimeout(closeBlockchain, MIN1024 ? 0 : 500);
-               setTimeout(closeStandard, MIN1024 ? 300 : 700);
-            }}
+            onChange={openModal}
          />
          <S.SelectImg src="./svg/arrow-color.svg" alt="selected" />
          {text}

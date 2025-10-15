@@ -84,7 +84,6 @@ height: 24px;
 }
 `
 export const SelectImg = styled.img`
-// display:none;
 --arrowSize: 32px;
 width: 0;
 transition: width 0.3s;

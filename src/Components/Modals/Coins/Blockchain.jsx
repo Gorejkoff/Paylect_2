@@ -6,31 +6,30 @@ import { useSelector } from 'react-redux';
 import * as M from '../Modal.style';
 import * as S from './Coins.style';
 import Blockchain from './Components/Blockchain';
-import useMediaQuery from '../../../Hooks/useMediaQuery';
+import StandardDesktop from './Components/StandardDesktop';
 
 
-const id = 'blockchain';
+
+
+const idBlockchain = 'blockchain';
 
 export default function BlockchainCoins() {
 
-   const MIN1024 = useMediaQuery('(min-width: 1024px)')
 
-   const closeModal = useCloseModal(id);
-   const isOpen = useSelector(state => state.modals[id].isOpen);
-
-   if (MIN1024) return;
+   const closeModal = useCloseModal(idBlockchain);
+   const isOpenBlockchain = useSelector(state => state.modals[idBlockchain].isOpen);
 
    return (
-      <BackgroundModal isOpen={isOpen}>
+      <BackgroundModal isOpen={isOpenBlockchain}>
          <M.ModalWrapper
-            id={id}
             data-lenis-prevent
-            style={animationModal(isOpen)}
+            style={animationModal(isOpenBlockchain)}
             onClick={(event) => { if (!event.target.closest('.modal-body')) closeModal() }}
          >
             <M.ModalScroll>
                <M.ModalContainer>
                   <S.Shell>
+                     <StandardDesktop />
                      <Blockchain />
                   </S.Shell>
                </M.ModalContainer>

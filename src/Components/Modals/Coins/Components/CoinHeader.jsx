@@ -1,7 +1,7 @@
 import React from 'react';
 import * as M from '../../Modal.style';
 import useCloseModal from '../../../../Hooks/ModalsHooks/useCloseModal';
-import ButtonCloseLight from '../../../Buttons/ButtonCloseLight/ButtonCloseLight';
+import ButtonCloseLight from '../../../Buttons/ButtonCloseBlackBig.jsx/ButtonCloseBlackBig';
 
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import * as S from './Exchange.style';
 import Progress from '../Progress_Icon/Progress';
 import { Link } from 'react-router-dom';
+import ButtonCloseBlackSmall from '../Buttons/ButtonCloseBlackSmall/ButtonCloseBlackSmall';
 
 export default function ExchangeHeader({ iconType, action }) {
 
@@ -31,17 +32,9 @@ export default function ExchangeHeader({ iconType, action }) {
                      <path d="M18.9236 17.2481L17.7115 16.2531L17.5778 12.2925C17.4919 9.74075 15.6402 7.70134 13.254 7.38607V6.45996H11.9178V7.39592C9.55066 7.7309 7.7276 9.76046 7.6417 12.3023L7.50808 16.3023L6.68722 17.1004L7.59398 18.0954H6V19.4747H11.6314V18.0954H7.61307L8.82526 16.923L8.97797 12.3614C9.04479 10.3319 10.6483 8.73583 12.6145 8.73583C14.5808 8.73583 16.1747 10.322 16.2511 12.3614L16.4038 16.9624L17.616 17.9575V18.1053H12.9772L11.6314 19.4846L12.5764 20.46L13.5213 19.4747H19L18.9141 17.258L18.9236 17.2481Z" fill="#848484" />
                   </svg>
                </button>
-               <button
-                  type='button'
-                  onClick={action.closeModal}
-                  aria-label='back'
-               >
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <circle cx="12.5" cy="12.5" r="12.5" fill="#141414" />
-                     <path d="M6.5 18.5209L18.5208 6.50006" stroke="#848484" />
-                     <path d="M6.5 6.5L18.5208 18.5208" stroke="#848484" />
-                  </svg>
-               </button>
+               <ButtonCloseBlackSmall
+                  action={action.closeModal}
+               />
             </S.Group>
          }
 

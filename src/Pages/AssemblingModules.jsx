@@ -16,8 +16,8 @@ export default function Modals() {
          <Sent />
          <Exchange />
          <Contact />
-         <Standard />
          <Blockchain />
+         <Standard />
          <QRCode />
       </>
    )

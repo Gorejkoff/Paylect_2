@@ -1,16 +1,20 @@
 import React from 'react';
 import * as M from '../Coins.style';
-import useOpenModal from '../../../../Hooks/ModalsHooks/useOpenModal';
+import useCloseModal from '../../../../Hooks/ModalsHooks/useCloseModal';
 
 
 export default function StandardkSelect({ name }) {
 
-   const openModal = useOpenModal('blockchain');
+   const closeBlockchain = useCloseModal('blockchain');
+   const closeStandard = useCloseModal('standard');
 
 
    return (
       <M.Select
-         onClick={openModal}
+         onClick={() => {
+            closeStandard()
+            setTimeout(closeBlockchain, 300)
+         }}
       >
          <M.SelectName>{name}</M.SelectName>
          <M.SelectCheck>

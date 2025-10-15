@@ -11,7 +11,8 @@ import useMediaQuery from "../../Hooks/useMediaQuery";
 
 export default function Header({ scrollAnhor }) {
    const MIN1024 = useMediaQuery('(min-width: 1024px)');
-   const openModal = useOpenModal("contacts");
+   const openModalContact = useOpenModal("contacts");
+   const openModalBlockchain = useOpenModal("blockchain");
 
    return (
       <header>
@@ -21,7 +22,7 @@ export default function Header({ scrollAnhor }) {
                <H.Menu>
                   <Anhor scrollAnhor={scrollAnhor} />
                   <Button
-                     action={openModal}
+                     action={MIN1024 ? openModalContact : openModalBlockchain}
                      text={MIN1024 ? 'let’s get started' : 'exchange'}
                      nameClass='decreases'
                   />

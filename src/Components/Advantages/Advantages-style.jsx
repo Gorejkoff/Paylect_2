@@ -8,6 +8,9 @@ export const CardGrid = styled.div`
   color: var(--color-grey-1);
 
   @media (min-width: 1100px) {
+    grid-template-columns:  1fr 1fr;
+  }
+  @media (min-width: 1250px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
@@ -28,14 +31,23 @@ export const CardHeader = styled.div`
   margin-bottom: 42px;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 96%;
   text-transform: uppercase;
-
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media (min-width: 110px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1400px) {
+    font-size: 20px;
+  }
   h2 {
-    @media (max-width: 768px) {
-      text-align: right;
+    text-align: right;
+    @media (max-width: 767.98px) {
     }
   }
 `;

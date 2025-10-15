@@ -6,7 +6,7 @@ export const SolutionBody = styled.div`
   flex-direction: column;
   gap: 30px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     padding-bottom: 30px;
     flex-direction: row;
   }
@@ -28,24 +28,27 @@ export const SolutionListGrid = styled.div`
 
 export const SolutionListNumber = styled.div`
   padding-bottom: 22px;
-  padding-right: min(121px, 10vw);
+  padding-right: 5vw;
   display: flex;
   align-items: flex-end;
   font-size: 20px;
   line-height: 106%;
   border-bottom: 1px solid var(--color-white-solid-opacity-35);
+  @media (min-width: 1400px) {
+    padding-right: 121px;
+  }
 `;
 export const SolutionListTitle = styled.div`
   padding-bottom: 22px;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 133%;
   border-bottom: 1px solid var(--color-white-solid-opacity-35);
 
   @media (min-width: 768px) {
     font-size: 34px;
   }
-  @media (min-width: 1100px) {
+  @media (min-width: 1400px) {
     font-size: 40px;
   }
 `;
@@ -60,7 +63,7 @@ export const SolutionListText = styled.div`
     padding-bottom: 50px;
     font-size: 20px;
   }
-  @media (min-width: 1100px) {
+  @media (min-width: 1400px) {
     padding-bottom: 63px;
     font-size: 24px;
   }

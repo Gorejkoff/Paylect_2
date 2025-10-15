@@ -3,11 +3,12 @@ import Lottie from "lottie-react";
 import * as S from "./Services-style";
 import Button from "../Buttons/ButtonText/Button";
 import { useInView } from "framer-motion";
+import useOpenModal from "../../Hooks/ModalsHooks/useOpenModal";
 
 export default function ServicesBlock(props) {
   const contRef = useRef();
   const lottieRef = useRef();
-
+  const openModalContact = useOpenModal('contacts');
   const inView = useInView(contRef);
 
   useEffect(() => {
@@ -32,8 +33,7 @@ export default function ServicesBlock(props) {
           {props.data.button && (
             <S.ServicesWrapperButton>
               <Button
-                actiom={props.action /* useOpemModal */}
-                idModal="contacts"
+                action={openModalContact}
                 text="Try out accepting crypto now"
               />
             </S.ServicesWrapperButton>

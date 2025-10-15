@@ -6,8 +6,11 @@ import List from './Solution-list';
 import Table from './Solution-table';
 import Button from '../Buttons/ButtonText/Button';
 import listData from './Solution-data.json';
+import useOpenModal from "../../Hooks/ModalsHooks/useOpenModal";
 
 export default function Solution() {
+
+   const openModalContact = useOpenModal('contacts')
 
    const content = {
       title: "The best solution",
@@ -27,7 +30,7 @@ export default function Solution() {
                </S.SolutionList>
             </S.SolutionBody>
             <S.SolutionButton>
-               <Button text="Start accepting crypto now" action={() => { /* useOpenModal */ }} />
+               <Button text="Start accepting crypto now" action={openModalContact} />
             </S.SolutionButton>
          </section>
       </Container>
